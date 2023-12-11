@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades en venta</title>
+</head>
+<body>
+    <section class="prop_ventas"></section>
+    <script>
+        const propiedades_venta = [
+    {
+    nombre: "Apartamento de lujo en zona exclusiva",
+    src: '',
+    descripcion: "Este apartamento de lujo está ubicado en una exclusiva zona residencial",
+    ubicacion: "123 Luxury Lane, Prestige Suburb, CA 45678",
+    habitaciones: 4,
+    costo: 0,
+    smoke: false,
+    pets: false
+    }, 
+    {
+        nombre: "Apartamento acogedor en la montaña",
+        src: '',
+        descripcion: "Este apartamento acogedor está situado en lo alto de una montaña con impresionantes vistas",
+        ubicacion: "789 Mountain Road, Summit Peaks, CA 23456",
+        habitaciones: 2,
+        costo: 0,
+        smoke: true,
+        pets: true
+        }, 
+        {
+            nombre: "Penthouse de lujo con terraza panorámica",
+            src: '',
+            descripcion: "Este penthouse de lujo ofrece una terraza panorámica con vistas espectaculares",
+            ubicacion: "567 Skyline Avenue, Skyview City, CA 56789",
+            habitaciones: 3,
+            costo: 0,
+            smoke: false,
+            pets: true
+            } 
+    ];
+ 
+    const venta = document.querySelector(".prop_ventas")
+    for (let valor of propiedades_venta){
+        const template = `
+        <div class = ‘valor’>
+        <div>${valor.nombre}</div>
+        <div>${valor.descripcion}</div>
+        <div>${valor.ubicacion}</div>
+        <div>${valor.habitaciones}</div>
+        <div>${valor.smoke}</div>
+        <div>${valor.pets}</div>
+        `;
+    venta.innerHTML += template   
+    }
+    </script>
+</body>
+</html>

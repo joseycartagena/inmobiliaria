@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades en alquiler</title>
+</head>
+<body>
+    <section class="prop_alquiler"></section>
+
+    <script>
+        const propiedades_alquiler = [
+    {
+    nombre: "Apartamento en el centro de la ciudad",
+    src: '',
+    descripcion: "Este apartamento de 2 habitaciones está ubicado en el corazón de la ciudad, cerca de todo",
+    ubicacion: "123 Main Street, Anytown, CA 91234",
+    habitaciones: 2,
+    costo: 0,
+    smoke: false,
+    pets: true
+    }, 
+    {
+        nombre: "Apartamento luminoso con vista al mar",
+        src: '',
+        descripcion: "Este hermoso apartamento ofrece una vista impresionante al mar",
+        ubicacion: "456 Ocean Avenue, Seaside Town, CA 56789",
+        habitaciones: 3,
+        costo: 0,
+        smoke: true,
+        pets: true
+        }, 
+        {
+            nombre: "Condominio moderno en zona residencial",
+            src: '',
+            descripcion: "Este elegante condominio moderno está ubicado en una tranquila zona residencial",
+            ubicacion: "123 Main Street, Anytown, CA 91234",
+            habitaciones: 2,
+            costo: 0,
+            smoke: false,
+            pets: false
+            } 
+    ];
+ 
+    const alquiler = document.querySelector(".prop_alquiler")
+    for (let valor of propiedades_alquiler){
+        const template = `
+        <div class = ‘valor’>
+        <div>${valor.nombre}</div>
+        <div>${valor.descripcion}</div>
+        <div>${valor.ubicacion}</div>
+        <div>${valor.habitaciones}</div>
+    `;
+    alquiler.innerHTML += template;        
+    }
+    </script>
+</body>
+</html>
